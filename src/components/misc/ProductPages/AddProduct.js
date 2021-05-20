@@ -3,7 +3,9 @@ import loginImg from '../Assets/login.png'
 import '../Assets/style.scss'
 import '../Assets/bg.css'
 import { Link } from 'react-router-dom';
-
+import {SubmitButtonSmall} from '../../registration/CommonItems';
+import styled from 'styled-components';
+import '../../mainPage/LandingItems/signUp/SignUp.css'
 
 // RegEx (Regular Expressions)
 const validateEmail = (email) => {
@@ -161,10 +163,11 @@ function AddProduct() {
         </div>
 
             {
-                state !== "sending" && state !== "successful" &&
+                state !== "sending" && state !== "successful" && 
                 <div className="button">
-                    <Link><button class="signButton" onClick={register}>SUBMIT!</button></Link>
+                <button class="signButtonsmall" onClick={register}>SUBMIT!</button>
                 </div>
+
             }
 
             { 
