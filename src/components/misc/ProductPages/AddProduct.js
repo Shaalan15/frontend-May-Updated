@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import loginImg from '../Assets/login.png'
 import '../Assets/style.scss'
 import '../Assets/bg.css'
+import { Link } from 'react-router-dom';
+
 
 // RegEx (Regular Expressions)
 const validateEmail = (email) => {
@@ -160,9 +162,9 @@ function AddProduct() {
 
             {
                 state !== "sending" && state !== "successful" &&
-                <button 
-                onClick={register}
-                className="btn btn-primary mb-3" type="button">Submit</button>
+                <div className="button">
+                    <Link><button class="signButton" onClick={register}>SUBMIT!</button></Link>
+                </div>
             }
 
             { 
