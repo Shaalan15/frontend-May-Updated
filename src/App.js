@@ -22,7 +22,7 @@ import Product4 from './components/misc/ProductPages/ProdPage4';
 import Product5 from './components/misc/ProductPages/ProdPage5';
 import Challenges from './components/challenges/ChallengePage';
 import ArtGallery from './components/mainPage/ArtGallery';
-
+import ProductRegistration from './components/misc/ProductPages/AddProduct';
 
 
 // Actual App function, has our code
@@ -42,6 +42,8 @@ function App() {
         <LayoutRoute path="/product-4" exact = {true} component ={Product4} />
         <LayoutRoute path="/product-5" exact = {true} component ={Product5} />
         <LayoutRoute path="/challenges" exact = {true} component ={Challenges} />
+        <LayoutRoute path="/product/add" exact = {true} component ={ProductRegistration} />
+
       </Switch>
     </Router>
 

@@ -4,7 +4,9 @@ function Page(props)
 {
     return(
         <div className="App">
+            <div className="art-gallery">
             <Product></Product>
+            </div>
         </div>
     );
 }

@@ -87,6 +87,14 @@ h1.artstart{
     letter-spacing: 50px;
 }
 
+label.artstart{
+  text-align: center;
+    font-weight: bold;
+    font-size: 1vw!important;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
 div.expanded-div{
   height: 69vh;
 }
@@ -115,7 +123,4 @@ div.art-gallery{
   height:85vh;
 }
 
-.art-piece:hover {
-  transform: scale(1.5);
-  }
 

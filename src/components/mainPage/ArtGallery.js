@@ -21,7 +21,7 @@ const Margin = styled.div`
 function ArtGallery(props)
 {
     return(
-        <div className="App">
+        <div className="App art-gallery">
             <div className="artstart">
                 <h1 className="artstart">Art Gallery</h1>
             </div>
