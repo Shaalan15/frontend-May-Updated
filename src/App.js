@@ -15,15 +15,10 @@ import Profile from './components/userProfile/Profile';
 import './App.css'
 // Importing the react-router things needed
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Product1 from './components/misc/ProductPages/ProdPage1';
-import Product2 from './components/misc/ProductPages/ProdPage2';
-import Product3 from './components/misc/ProductPages/ProdPage3';
-import Product4 from './components/misc/ProductPages/ProdPage4';
-import Product5 from './components/misc/ProductPages/ProdPage5';
 import Challenges from './components/challenges/ChallengePage';
 import ArtGallery from './components/mainPage/ArtGallery';
 import ProductRegistration from './components/misc/ProductPages/AddProduct';
-
+import ProductPage from './components/misc/ProductPages/Productcomp';
 
 // Actual App function, has our code
 function App() {
@@ -35,14 +30,10 @@ function App() {
         <LayoutRoute2 path="/login" exact={true} component={LoginPage} />
         <LayoutRoute2 path="/register" exact={true} component={SignupPage} />
         <LayoutRoute2 path="/user" exact={true} component={Profile} />
-        <LayoutRoute path="/art-gallery" exact = {true} component ={ArtGallery} />
-        <LayoutRoute path="/product-1" exact = {true} component ={Product1} />
-        <LayoutRoute path="/product-2" exact = {true} component ={Product2} />
-        <LayoutRoute path="/product-3" exact = {true} component ={Product3} />
-        <LayoutRoute path="/product-4" exact = {true} component ={Product4} />
-        <LayoutRoute path="/product-5" exact = {true} component ={Product5} />
+        <LayoutRoute path="/product" exact = {true} component ={ArtGallery} />
         <LayoutRoute path="/challenges" exact = {true} component ={Challenges} />
         <LayoutRoute path="/product/add" exact = {true} component ={ProductRegistration} />
+        <LayoutRoute path="/productpage" exact = {true} component ={ProductPage} />
 
       </Switch>
     </Router>

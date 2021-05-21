@@ -88,7 +88,6 @@ function AddProduct() {
             formData.append('description', descriptionField.value);
             formData.append('price', priceField.value);
             formData.append('color', colorField.value);
-            formData.append('productImage', productImageField.value);
             formData.append('associatedUsername', associatedUsernameField.value);
 
             fetch(`${process.env.REACT_APP_API_ENDPOINT}/product/add`, {
@@ -127,41 +126,36 @@ function AddProduct() {
             <div className="form-group">
               <label htmlFor="Description">Description</label>
               <input  
-              ref={ (elem)=>descriptionField = elem } type="text" name="description" placeholder="Am I just a name :("
+              ref={ (elem)=>descriptionField = elem } type="text"  placeholder="Am I just a name :("
               />
             </div>
             <div className="form-group">
               <label>Price</label>
               <input  
-              ref={ (elem)=>priceField = elem } type="text" name="price" placeholder="What's my worth..."
+              ref={ (elem)=>priceField = elem } type="text"  placeholder="What's my worth..."
               />
             </div>
             <div className="form-group">
               <label>Color</label>
               <input  
-              ref={ (elem)=>colorField = elem } type="text" name="color" placeholder="I mean.."
+              ref={ (elem)=>colorField = elem } type="text"  placeholder="I mean.."
               />
             </div>
             <div className="form-group">
               <label>Author Username</label>
               <input  
-              ref={ (elem)=>associatedUsernameField = elem } type="text" name="associatedUsername" placeholder="Who is my father/mother/creator?"
+              ref={ (elem)=>associatedUsernameField = elem } type="text"  placeholder="Who is my father/mother/creator?"
               />
             </div>
             <div className="form-group">
               <label>Upload Product</label>
               <input  
               onChange={attachFile}
-              ref={ (elem)=>productImageField = elem } type="file" accept=".png, .jpg, .jpeg, .svg" name="productImage" placeholder="What do I look like?"
+              ref={ (elem)=>productImageField = elem } type="file" accept=".png, .jpg, .jpeg, .svg"  placeholder="What do I look like?"
               />
             </div>
           </div>
         </div>
-        <div className="footer">
-          <button type="button" className="btn">
-          </button>
-        </div>
-
             {
                 state !== "sending" && state !== "successful" && 
                 <div className="button">
