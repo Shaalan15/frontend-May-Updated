@@ -2,8 +2,8 @@
 import NavBar from './LandingItems/navbar/NavBar';
 // Importing Footer 
 import Footer from './LandingItems/footer/Footer';
-import Cards from '../mainPage/LandingItems/testimonials/Cards';
-import Grids from '../misc/Grids';
+import Product from '../misc/ProductPages/Product';
+import React, {useEffect, useState} from "react";
 // Importing the css
 import './LandingItems/navbar/NavBar.css'
 import './LandingItems/testimonials/Cards.css'
@@ -18,16 +18,39 @@ const Margin = styled.div`
 `;
 
 
-function ArtGallery(props)
-{
-    return(
-        <div className="App art-gallery">
-            <div className="artstart">
-                <h1 className="artstart">Art Gallery</h1>
+function Paintings(){
+    const [paintings, setpaintings] = useState([{
+        title: '',
+        description:'',
+        price: '',
+        color: '',
+        productImage: '',
+        associatedUsername: ''
+    }])
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_ENDPOINT}/product/`).then(res => {
+            if(res.ok){
+                return res.json()
+            }
+        }).then(jsonRes => setpaintings(jsonRes));
+    })
+
+    return <div className="container">
+        <h1>Art Gallery</h1>
+        {paintings.map(painting =>
+        <div>
+            <Product 
+            productImage={painting.productImage} 
+            title={painting.title}
+            description={painting.description}
+            price={painting.price}
+            associatedUsername={painting.associatedUsername}
+            color={painting.color}
+            />
             </div>
-                <Grids/>
-        </div>
-    );
+        )}
+    </div>
 }
 
-export default ArtGallery;
+export default Paintings;

@@ -1,6 +1,6 @@
 const navbarLinks = [
     { title: 'Home Page', path: '/' },
-    { title: 'Art Gallery', path: '/art-gallery' },
+    { title: 'Art Gallery', path: '/product' },
     { title: 'Challenges', path: '/challenges' }
 ];
 
