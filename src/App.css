@@ -75,16 +75,24 @@
 
 .artstart{
   background-color: transparent;
-  height: 45vh;
 }
 h1.artstart{
   text-align: center;
-  padding-top: 120px;
+  padding-top: 20px;
     font-weight: bold;
-    font-size: 5vw!important;
+    font-size: 40px!important;
     text-transform: uppercase;
-    position: relative;
     letter-spacing: 50px;
+    color: black;
+}
+h2.artstart{
+  text-align: center;
+    font-weight: bold;
+    font-size: 30px!important;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    color: black;
+
 }
 
 label.artstart{
@@ -124,3 +132,8 @@ div.art-gallery{
 }
 
 
+img.product-holder{
+  height: 40%;
+  width: 40%;
+  padding-top: 40px;
+}

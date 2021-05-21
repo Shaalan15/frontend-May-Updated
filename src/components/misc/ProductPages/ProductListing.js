@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import '../../../App.css'
 
-
-function Product(props)
+function ProductListing(props)
 {
     return(
         <div>
-          <img src={props.productImage}></img>
-          <h1>{props.title}</h1>
-          <h4>{props.description}</h4>
-          <h5>{props.price}</h5>
-          <h6>{props.associatedUsername}</h6>
+          <img className="product-holder" src={props.productImage}/>
+          <h1 className="artstart">{props.title}</h1>
+          <h2 className="artstart">{props.description}</h2>
+          <h3>{props.price}</h3>
+          <h4>{props.associatedUsername}</h4>
           <Link to={{
             pathname:'/productpage',
             state:{
@@ -26,4 +26,4 @@ function Product(props)
     );
 }
 
-export default Product;
+export default ProductListing;

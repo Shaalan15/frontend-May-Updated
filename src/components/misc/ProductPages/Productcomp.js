@@ -7,21 +7,26 @@ import DetailsThumb from '../Assets/DetailsThumb';
 import { motion } from 'framer-motion'
 // Importing styles
 import styled from 'styled-components';
+import { Link, useLocation } from 'react-router-dom';
 
-class Product extends Component{
+
+class Product extends React.Component{
 
   state = {
     products: [
       {
         "_id": "1",
-        "title": "I accidentally spilled paint.. sorry",
+        "title": "Nike Shoes",
         "src": [
-            "https://wallpapercave.com/wp/wp3310847.jpg",
+            "https://www.upsieutoc.com/images/2020/06/27/img1.jpg",
+            "https://www.upsieutoc.com/images/2020/06/27/img2.jpg",
+            "https://www.upsieutoc.com/images/2020/06/27/img3.jpg",
+            "https://www.upsieutoc.com/images/2020/06/27/img4.jpg"
           ],
-        "description": "Our budget couldn't cover enough paint to start over...",
-        "content": "",
-        "price": 230,
-        "colors":["black"],
+        "description": "UI/UX designing, html css tutorials",
+        "content": "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+        "price": 23,
+        "colors":["red","black","crimson","teal"],
         "count": 1
       }
     ],
@@ -50,24 +55,23 @@ class Product extends Component{
     return(
       <div className="app">
         {
-
           products.map(item =>(
             <div className="details" key={item._id}>
               <div className="big-img">
-                <img src={this.props.productImage} alt=""/>
+                <img src={item.src[index]} alt=""/>
               </div>
 
               <div className="box">
                 <div className="row">
-                  <h2>{this.props.title}</h2>
-                  <span>${this.props.price}</span>
+                  <h2>{item.title}</h2>
+                  <span>${item.price}</span>
                 </div>
-                <Colors colors={this.props.color} />
+                <Colors colors={item.colors} />
 
-                <p>{this.props.description}</p>
-                <p>{this.props.content}</p>
+                <p>{item.description}</p>
+                <p>{item.content}</p>
 
-                <DetailsThumb images={this.props.src} tab={this.handleTab} myRef={this.myRef} />
+                <DetailsThumb images={item.src} tab={this.handleTab} myRef={this.myRef} />
                 <button className="cart">Add to cart</button>
 
               </div>

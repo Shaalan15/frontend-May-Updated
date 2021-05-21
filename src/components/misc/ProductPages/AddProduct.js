@@ -148,10 +148,10 @@ function AddProduct() {
               />
             </div>
             <div className="form-group">
-              <label>Upload Product</label>
+              <label for="productImage" >Upload Product</label>
               <input  
               onChange={attachFile}
-              ref={ (elem)=>productImageField = elem } type="file" accept=".png, .jpg, .jpeg, .svg"  placeholder="What do I look like?"
+              ref={ (elem)=>productImageField = elem } type="file" accept=".png, .jpg, .jpeg, .svg"  placeholder="What do I look like?" id="productImage" aria-describedby="productImage"
               />
             </div>
           </div>

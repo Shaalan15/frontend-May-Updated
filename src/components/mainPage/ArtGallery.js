@@ -2,7 +2,7 @@
 import NavBar from './LandingItems/navbar/NavBar';
 // Importing Footer 
 import Footer from './LandingItems/footer/Footer';
-import Product from '../misc/ProductPages/Product';
+import ProductListing from '../misc/ProductPages/ProductListing';
 import React, {useEffect, useState} from "react";
 // Importing the css
 import './LandingItems/navbar/NavBar.css'
@@ -36,11 +36,11 @@ function Paintings(){
         }).then(jsonRes => setpaintings(jsonRes));
     })
 
-    return <div className="container">
+    return <div className="art-gallery">
         <h1>Art Gallery</h1>
         {paintings.map(painting =>
-        <div>
-            <Product 
+        <div className="art-piece">
+            <ProductListing 
             productImage={painting.productImage} 
             title={painting.title}
             description={painting.description}
@@ -50,6 +50,7 @@ function Paintings(){
             />
             </div>
         )}
+
     </div>
 }
 
